@@ -17,5 +17,10 @@
   # size of the app. Only one parameter can be used, color and background_image cannot both be set.
    color: "#ffffff"
    image: "assets/images/splash_Icon.png"
+   image_dark: assets/images/splash_Icon.png
+
+   android_12:
+   color: "#ffffff"
+   image: "assets/images/splash_Icon.png"
 
   
