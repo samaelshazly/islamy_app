@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/common/app_theme.dart';
 import 'package:islamy_app/ui/taps/screens/home_screen.dart';
-import 'package:islamy_app/ui/taps/screens/quran.dart';
+import 'package:islamy_app/ui/taps/screens/quran_screen.dart';
 
 void main() {
   runApp(const MyApp());

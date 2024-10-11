@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/common/image.dart';
-import 'package:islamy_app/ui/taps/screens/quran.dart';
+import 'package:islamy_app/ui/taps/screens/quran_screen.dart';
 
 class Quran_tap extends StatelessWidget {
   Quran_tap({super.key});
@@ -127,7 +127,10 @@ class Quran_tap extends StatelessWidget {
       Image.asset(
         AppsImage.quranHeaderIcn,
         height: MediaQuery.of(context).size.height * .25,
-      ),
+      ),Divider(),
+      Text('Suras Nama',style: Theme.of(context).textTheme.titleMedium),
+      Divider(),
+
       Expanded(
         child: ListView.separated(
           itemBuilder: (context, index) => Center(
