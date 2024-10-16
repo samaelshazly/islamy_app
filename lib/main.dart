@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/common/app_theme.dart';
+import 'package:islamy_app/ui/taps/screens/hadeth_screen.dart';
 import 'package:islamy_app/ui/taps/screens/home_screen.dart';
 import 'package:islamy_app/ui/taps/screens/quran_screen.dart';
 
@@ -16,11 +17,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: AppThemes.lighttheme,
+      darkTheme:AppThemes.darktheme,
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       routes: {
         HomeScreen.routName: (_) => HomeScreen(),
-        QuranScreen.routName: (context) => QuranScreen()
+        QuranScreen.routName: (context) => QuranScreen(),
+        HadethScreen.routName: (context) => HadethScreen(),
       },
       initialRoute: HomeScreen.routName,
     );

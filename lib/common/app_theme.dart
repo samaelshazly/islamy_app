@@ -44,7 +44,7 @@ class AppThemes {
   static ThemeData darktheme = ThemeData(
      dividerTheme: DividerThemeData(color: AppColors.gold),
       colorScheme: ColorScheme(
-          brightness: Brightness.light,
+          brightness: Brightness.dark,
           primary: AppColors.maindarkcolor,
           onPrimary: AppColors.maindarkcolor,
           secondary: Colors.white,
@@ -55,7 +55,10 @@ class AppThemes {
           onBackground: Colors.white,
           surface: Colors.white,
           onSurface: Colors.white),
-      textTheme: TextTheme(
+      textTheme: TextTheme( titleSmall: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 22,
+              color:AppColors.gold ),
           titleMedium: TextStyle(
               fontWeight: FontWeight.w400, fontSize: 25, color: Colors.white)),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(

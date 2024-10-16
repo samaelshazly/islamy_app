@@ -22,23 +22,28 @@ class _QuranScreenState extends State<QuranScreen> {
     return Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(AppsImage.bg), fit: BoxFit.cover)),
-        child:   Scaffold(
-          body:   Container(
+                image: AssetImage(
+                    Theme.of(context).colorScheme.brightness == Brightness.light
+                        ? AppsImage.bg
+                        : AppsImage.darkbg),
+                fit: BoxFit.cover)),
+        child: Scaffold(
+          body: Container(
             padding: EdgeInsets.all(15),
-            child:   Column(
+            child: Column(
               children: [
                 Center(
                     child: Text(
                   quran_model.name,
                   style: Theme.of(context).textTheme.titleMedium,
                 )),
-             Divider(),
+                Divider(),
                 surascontent.isEmpty
                     ? Expanded(
                         child: Center(child: CircularProgressIndicator()))
                     : Expanded(
-                        child: ListView.builder(itemCount: surascontent.length,
+                        child: ListView.builder(
+                          itemCount: surascontent.length,
                           itemBuilder: (context, index) => Center(
                             child: Text(
                               surascontent[index],
