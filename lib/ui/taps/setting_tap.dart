@@ -44,13 +44,15 @@ class _setting_tapState extends State<setting_tap> {
               trailing: Container(
                 decoration: BoxDecoration(
                     border: Border.all(color: AppColors.gold),
-                    borderRadius: BorderRadius.circular(22)),padding: EdgeInsets.symmetric(horizontal: 9),
+                    borderRadius: BorderRadius.circular(22)),
+                padding: EdgeInsets.symmetric(horizontal: 9),
                 child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
-                    value: 'en',
+                    value: provider.localCode,
                     borderRadius: BorderRadius.circular(22),
                     items: [
                       DropdownMenuItem(
+                        value: 'en',
                         child: Text(
                           'English',
                           style: Theme.of(context)
@@ -58,7 +60,6 @@ class _setting_tapState extends State<setting_tap> {
                               .titleMedium!
                               .copyWith(fontSize: 15),
                         ),
-                        value: 'en',
                       ),
                       DropdownMenuItem(
                         child: Text(
@@ -71,7 +72,10 @@ class _setting_tapState extends State<setting_tap> {
                         value: 'ar',
                       )
                     ],
-                    onChanged: (value) {},
+                    onChanged: (value) {
+               if(value!=null)    {   provider.changeAppLocal(value);
+              }
+                    },
                   ),
                 ),
               ))

@@ -5,6 +5,7 @@ import 'package:islamy_app/ui/taps/quran_tap.dart';
 import 'package:islamy_app/ui/taps/radio_tap.dart';
 import 'package:islamy_app/ui/taps/sebha_tap.dart';
 import 'package:islamy_app/ui/taps/setting_tap.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routName = 'homescreen';
@@ -36,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               fit: BoxFit.cover)),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('islamy'),
+          title: Text(AppLocalizations.of(context)!.islamy),
         ),
         body: tapslist[index],
         bottomNavigationBar: BottomNavigationBar(
@@ -48,15 +49,15 @@ class _HomeScreenState extends State<HomeScreen> {
             items: [
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage(AppsImage.hadeth)),
-                  label: 'hadeth'),
+                  label: AppLocalizations.of(context)!.hadeth),
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage(AppsImage.quran)), label: 'quran'),
+                  icon: ImageIcon(AssetImage(AppsImage.quran)), label: AppLocalizations.of(context)!.quran),
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage(AppsImage.radio)), label: 'radio'),
+                  icon: ImageIcon(AssetImage(AppsImage.radio)), label: AppLocalizations.of(context)!.radio),
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage(AppsImage.sepha)), label: 'sebha'),
+                  icon: ImageIcon(AssetImage(AppsImage.sepha)), label: AppLocalizations.of(context)!.sebha),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.settings), label: 'setting')
+                  icon: Icon(Icons.settings), label: AppLocalizations.of(context)!.setting)
             ]),
       ),
     );
